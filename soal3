@@ -1,0 +1,40 @@
+uses crt;
+var 
+suhu,hasil : real; pilih : integer;
+begin
+    clrscr;
+    writeln('Pilih jenis konversi suhu Anda :');
+    writeln('1. Celcius ke Fahrenheit');
+    writeln('2. Fahrenheit ke Celcius');
+    writeln('3. Celcius ke Kelvin');
+    writeln('4. Kelvin ke Celcius');
+    write('Jenis konversi suhu yang saya pilih : '); readln(pilih); 
+    if (pilih = 1) then 
+    begin
+    write ('Masukkan suhu dalam Celcius : '); readln(suhu);
+    hasil := 9*suhu/5 + 32;
+    write('Hasil konversi suhu Celcius ke Fahrenheit : ', hasil:0:2);
+    end
+    else if (pilih = 2) then
+    begin
+    write('Masukkan suhu dalam Fahrenheit : '); readln(suhu);
+    hasil := 5*suhu-160/9;
+    write('Konversi suhu Fahrenheit ke Celcius : ', hasil:0:2);
+    end
+    else if (pilih = 3) then
+    begin
+    write('Masukkan suhu dalam Celcius : '); readln(suhu);
+    hasil := suhu+273;
+    write('Konversi suhu Celcius ke Kelvin : ', hasil:0:2);
+    end
+    else if (pilih = 4) then
+    begin
+    write('Masukkan suhu dalam Kelvin : '); readln(suhu);
+    hasil := suhu-273;
+    write('Konversi suhu Kelvin ke Celcius : ', hasil:0:2);
+    end
+    else if (pilih > 4) then
+    begin
+    write('Tidak valid');
+    end;
+end.
