@@ -1,0 +1,31 @@
+uses crt;
+var
+total,jumlah : real;
+begin
+    clrscr;
+    write('Total belanja : '); readln(total);
+    if (total < 100000) then 
+    begin 
+     writeln('Tidak ada diskon');
+     jumlah := total
+     end
+    else if 
+    (total >= 100000) and (total <= 499999) then
+    begin 
+     writeln('Diskon 10%'); 
+     jumlah := total*0.9
+     end
+    else if 
+    (total >= 500000) and (total <= 999999) then
+    begin 
+    writeln('Diskon 20%'); jumlah := total*0.8
+    end 
+    else if  
+    (total >= 1000000) then
+    begin 
+    writeln('Diskon 30%'); jumlah := total*0.7
+    end;
+   
+    write('Jumlah harga : ', jumlah:0:0);
+    
+end.
