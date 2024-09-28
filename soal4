@@ -1,0 +1,23 @@
+uses crt;
+var
+operasi : integer; angka1,angka2,hasil : real;
+begin
+    clrscr;
+    writeln('Pilih jenis operasi matematika : ');
+    writeln('1. Penjumlahan');
+    writeln('2. Pengurangan');
+    writeln('3. Perkalian');
+    writeln('4. Pembagian');
+    write('Jenis operasi yang dipilih : '); readln(operasi);
+    write('Masukkan angka : '); readln(angka1);
+    write('Masukkan angka : '); readln(angka2);
+
+    case operasi of 
+    1: hasil := angka1+angka2;
+    2: hasil := angka1-angka2;
+    3: hasil := angka1*angka2;
+    4: hasil := angka1/angka2;
+    end;
+   
+    write('hasilnya adalah : ', hasil:0:2);
+end.
